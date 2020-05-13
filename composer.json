@@ -1,0 +1,18 @@
+{
+  "name": "nexcess/nxcli-php-compatibility",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "description": "The Nexcess On-Server CLI Tool PHP Compatibilty Helper",
+  "license": "proprietary",
+  "require": {
+    "phpcompatibility/phpcompatibility-wp": "^2.1"
+  },
+  "scripts": {
+    "post-update-cmd": [
+      "phpcs . --config-set installed_paths /usr/local/nxcli-php-compatibility/vendor/phpcompatibility/phpcompatibility-wp/PHPCompatibilityWP,/usr/local/nxcli-php-compatibility/vendor/phpcompatibility/phpcompatibility-paragonie/PHPCompatibilityParagonieRandomCompat,/usr/local/nxcli-php-compatibility/vendor/phpcompatibility/phpcompatibility-paragonie/PHPCompatibilityParagonieSodiumCompat,/usr/local/nxcli-php-compatibility/vendor/phpcompatibility/php-compatibility/PHPCompatibility"
+    ],
+    "post-install-cmd": [
+      "phpcs . --config-set installed_paths /usr/local/nxcli-php-compatibility/vendor/phpcompatibility/phpcompatibility-wp/PHPCompatibilityWP,/usr/local/nxcli-php-compatibility/vendor/phpcompatibility/phpcompatibility-paragonie/PHPCompatibilityParagonieRandomCompat,/usr/local/nxcli-php-compatibility/vendor/phpcompatibility/phpcompatibility-paragonie/PHPCompatibilityParagonieSodiumCompat,/usr/local/nxcli-php-compatibility/vendor/phpcompatibility/php-compatibility/PHPCompatibility"
+    ]
+  }
+}
